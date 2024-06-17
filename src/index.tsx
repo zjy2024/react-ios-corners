@@ -115,6 +115,7 @@ export function getMaskStyle(input: GetMaskStyleInput): CSSProperties {
   };
 }
 
+// cachedGetMaskStyle 是一个函数
 const cachedGetMaskStyle = createMemoryCache(getMaskStyle, input => {
   const { width, height, radius, roundness } = input;
 

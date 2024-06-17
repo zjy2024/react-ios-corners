@@ -12,6 +12,7 @@ export function App() {
 
   return (
     <UIHolder>
+      {/* 设置 */}
       <UIOptions>
         <UIFormPart>
           <InputForm
@@ -31,31 +32,9 @@ export function App() {
             </button>
           )}
         </UIFormPart>
-        <UIFormPart>
-          <InputForm
-            label="Roundess"
-            value={ratio}
-            onChange={setRatio}
-            min={0}
-            max={0.35}
-            step={0.01}
-          />
-          <button
-            onClick={() => {
-              setRatio(DEFAULT_RATIO);
-            }}
-          >
-            iOS Default
-          </button>
-        </UIFormPart>
-        <InputForm
-          label="Size"
-          value={size}
-          onChange={setSize}
-          min={140}
-          max={400}
-        />
       </UIOptions>
+
+      {/* 展示 */}
       <UISquircleHolder>
         <SquircleBase
           className="demo"
